@@ -16,3 +16,8 @@ docker run -it --rm \
 
 ## Tests
 
+```shell
+
+./tests.sh
+
+```
