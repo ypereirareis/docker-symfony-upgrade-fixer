@@ -4,11 +4,23 @@
 
 A docker image to run [Symfony Upgrade Fixer](https://github.com/umpirsky/Symfony-Upgrade-Fixer)
 
+## Build it
+
+```shell
+
+make build
+
+```
+
 ## Run it
 
 The working dir into the docker container is `/app` by default.
 
 ```shell
+
+make start
+
+OR
 
 docker run -it --rm \
   -v $(pwd):/app \
