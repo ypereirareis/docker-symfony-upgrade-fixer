@@ -18,10 +18,6 @@ The working dir into the docker container is `/app` by default.
 
 ```shell
 
-make start
-
-OR
-
 docker run -it --rm \
   -v $(pwd):/app \
     ypereirareis/symfony-upgrade-fixer fix .
