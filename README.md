@@ -1,5 +1,7 @@
 # Docker Symfony Upgrade Fixer
 
+[![Build Status](https://travis-ci.org/ypereirareis/docker-symfony-upgrade-fixer.svg?branch=master)](https://travis-ci.org/ypereirareis/docker-symfony-upgrade-fixer)
+
 A docker image to run [Symfony Upgrade Fixer](https://github.com/umpirsky/Symfony-Upgrade-Fixer)
 
 ## Run it
