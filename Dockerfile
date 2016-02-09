@@ -6,15 +6,15 @@ ENV HOME /root
 WORKDIR /app
 
 RUN apt-get update && apt-get install -y --no-install-recommends \
-	nano \
-	git \
-	curl \
-	wget \
-	&& rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
+  nano \
+  git \
+  curl \
+  wget \
+  && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/* \
+  && apt-get purge -y --auto-remove
 
-RUN wget https://github.com/umpirsky/Symfony-Upgrade-Fixer/releases/download/v0.1.3/symfony-upgrade-fixer.phar -O /usr/local/bin/symfony-upgrade-fixer
-
-RUN chmod a+x /usr/local/bin/symfony-upgrade-fixer
+RUN wget https://github.com/umpirsky/Symfony-Upgrade-Fixer/releases/download/v0.1.3/symfony-upgrade-fixer.phar -O /usr/local/bin/symfony-upgrade-fixer \
+  && chmod a+x /usr/local/bin/symfony-upgrade-fixer
 
 ENTRYPOINT ["symfony-upgrade-fixer", "--ansi"]
 
